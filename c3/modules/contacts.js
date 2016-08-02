@@ -3,7 +3,7 @@ var fs = require('fs');
 function read_json_file()
 {
 	var file = './data/contacts.json';	
-	return fs.readFileSync(file);
+	return fs.readFileSync(file); // load file from filesystem
 }
 
 exports.list = function()
@@ -28,6 +28,12 @@ exports.query = function(number)
 	return null;
 };
 
+/*
+* query the key and value from dataset
+* @param arg
+* @param value
+*
+* */
 exports.query_by_arg = function(arg, value)
 {
 	var json = read_json_file();

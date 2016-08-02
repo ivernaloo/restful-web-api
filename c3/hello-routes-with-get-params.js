@@ -3,6 +3,9 @@ var url = require('url');
 var app = express();
 
 app.get('/hello', function(request, response){
+
+	// url.parse(urlString, parseQueryString)
+	// parseQueryString true/false object/url
 	var get_params = url.parse(request.url, true).query;	
 	
 	if (Object.keys(get_params).length == 0)
